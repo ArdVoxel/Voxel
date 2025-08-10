@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArdVoxel</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background blur overlay -->
+    <div class="background-overlay"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <h1 class="logo">ArdVoxel</h1>
+    </header>
+
+    <!-- Main section -->
+    <main class="main-section">
+        <div class="profile-container">
+            <div class="profile-image">
+                <img src="img/Perfil.jpg" alt="Profile" id="profileImg">
+            </div>
+            <div class="profile-text">
+                <p>Hi, I'm Ard, I'm an amateur voxel artist... I make models and characters from time to time. If you want you can download, share or modify them... If you publish them please give me credit for them... Byeeee</p>
+                <a href="https://www.instagram.com/ardvoxel?igsh=MXM0dWJ1M2xvMDJuaA==" target="_blank" class="profile-link">
+                    <i class="bi bi-instagram"></i>
+                    Follow me on Instagram
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Gallery Grid -->
+    <section class="gallery-grid">
+        <div class="gallery-item">
+            <div class="carousel-container">
+                <div class="carousel" data-carousel="1">
+                    <div class="carousel-track">
+                        <img src="img/IMGArts/IMG-20250810-WA0006.jpg" alt="Image 1" class="carousel-image active">
+                        <img src="img/IMGArts/IMG-20250810-WA0007.jpg" alt="Image 2" class="carousel-image">
+                        <img src="img/IMGArts/IMG-20250810-WA0008.jpg" alt="Image 3" class="carousel-image">
+                    </div>
+                    <button class="carousel-btn prev" onclick="changeSlide(1, -1)">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" onclick="changeSlide(1, 1)">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <h3 class="gallery-title">Pichirilitos Collection</h3>
+            <button class="download-btn" onclick="downloadFile('')">
+                <i class="bi bi-download"></i>
+                Not available
+            </button>
+        </div>
+
+        <div class="gallery-item">
+            <div class="carousel-container">
+                <div class="carousel" data-carousel="2">
+                    <div class="carousel-track">
+                        <img src="img/IMGArts/snap2025-08-03-16-28-02.png" alt="Scene 1" class="carousel-image active">
+                        <img src="img/IMGArts/snap2025-08-03-16-47-03.png" alt="Scene 2" class="carousel-image">
+                    </div>
+                    <button class="carousel-btn prev" onclick="changeSlide(2, -1)">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" onclick="changeSlide(2, 1)">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <h3 class="gallery-title">Chef and Waiter</h3>
+            <button class="download-btn" onclick="downloadFile('Chef.vox')">
+                <i class="bi bi-download"></i>
+                Download
+            </button>
+        </div>
+
+        <div class="gallery-item">
+            <div class="carousel-container">
+                <div class="carousel" data-carousel="3">
+                    <div class="carousel-track">
+                        <img src="img/IMGArts/snap2025-08-04-18-41-04.png" alt="Portrait 1" class="carousel-image active">
+                        <img src="img/IMGArts/snap2025-08-04-19-03-01.png" alt="Portrait 2" class="carousel-image">
+                        <img src="img/IMGArts/snap2025-08-04-19-15-49.png" alt="Portrait 3" class="carousel-image">
+                    </div>
+                    <button class="carousel-btn prev" onclick="changeSlide(3, -1)">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" onclick="changeSlide(3, 1)">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <h3 class="gallery-title">Clay, The Hunting Mammoth</h3>
+            <button class="download-btn" onclick="downloadMultipleFiles(['Mastodon.vox', 'scene_fall.vox'])">
+                <i class="bi bi-download"></i>
+                Download Pack
+            </button>
+        </div>
+
+        <div class="gallery-item">
+            <div class="carousel-container">
+                <div class="carousel" data-carousel="4">
+                    <div class="carousel-track">
+                        <img src="img/IMGArts/snap2025-08-04-21-14-38.png" alt="Dragon 1" class="carousel-image active">
+                        <img src="img/IMGArts/snap2025-08-04-21-19-18.png" alt="Dragon 2" class="carousel-image">
+                        <img src="img/IMGArts/snap2025-08-04-21-21-34.png" alt="Dragon 3" class="carousel-image">
+                    </div>
+                    <button class="carousel-btn prev" onclick="changeSlide(4, -1)">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" onclick="changeSlide(4, 1)">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <h3 class="gallery-title">Dragons of the East</h3>
+            <button class="download-btn" onclick="downloadFile('dragon.vox')">
+                <i class="bi bi-download"></i>
+                Download
+            </button>
+        </div>
+
+        <div class="gallery-item">
+            <div class="carousel-container">
+                <div class="carousel" data-carousel="5">
+                    <div class="carousel-track">
+                        <img src="img/IMGArts/snap2025-08-06-19-15-01.png" alt="3D Model" class="carousel-image active">
+                    </div>
+                    <button class="carousel-btn prev" onclick="changeSlide(5, -1)">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" onclick="changeSlide(5, 1)">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <h3 class="gallery-title">Dusk and his Klanker</h3>
+            <button class="download-btn" onclick="downloadFile('Duke.vox')">
+                <i class="bi bi-download"></i>
+                Download
+            </button>
+        </div>
+
+        <div class="gallery-item">
+            <div class="carousel-container">
+                <div class="carousel" data-carousel="6">
+                    <div class="carousel-track">
+                        <img src="img/IMGArts/snap2025-08-02-10-23-53.png" alt="Character" class="carousel-image active">
+                    </div>
+                    <button class="carousel-btn prev" onclick="changeSlide(6, -1)">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" onclick="changeSlide(6, 1)">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <h3 class="gallery-title">Xender V1</h3>
+            <button class="download-btn" onclick="downloadFile('Zonder.vox')">
+                <i class="bi bi-download"></i>
+                Download
+            </button>
+        </div>
+
+        <div class="gallery-item">
+            <div class="carousel-container">
+                <div class="carousel" data-carousel="7">
+                    <div class="carousel-track">
+                        <img src="img/IMGArts/snap2025-08-08-17-20-29.png" alt="Explorer 1" class="carousel-image active">
+                        <img src="img/IMGArts/snap2025-08-08-17-39-33.png" alt="Explorer 2" class="carousel-image ">
+                        <img src="img/IMGArts/snap2025-08-08-19-17-36.png" alt="Explorer 3" class="carousel-image">
+                    </div>
+                    <button class="carousel-btn prev" onclick="changeSlide(7, -1)">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" onclick="changeSlide(7, 1)">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <h3 class="gallery-title">Oliver the Expeditioner</h3>
+            <button class="download-btn" onclick="downloadFile('XioXio.vox')">
+                <i class="bi bi-download"></i>
+                Download
+            </button>
+        </div>
+
+        <div class="gallery-item">
+            <div class="carousel-container">
+                <div class="carousel" data-carousel="8">
+                    <div class="carousel-track">
+                        <img src="img/IMGArts/snap2025-08-09-17-16-54.png" alt="Fish 1" class="carousel-image active">
+                        <img src="img/IMGArts/snap2025-08-09-17-19-23.png" alt="Fish 2" class="carousel-image ">
+                        <img src="img/IMGArts/snap2025-08-09-17-29-51.png" alt="Fish 3" class="carousel-image">
+                    </div>
+                    <button class="carousel-btn prev" onclick="changeSlide(8, -1)">
+                        <i class="bi bi-chevron-left"></i>
+                    </button>
+                    <button class="carousel-btn next" onclick="changeSlide(8, 1)">
+                        <i class="bi bi-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+            <h3 class="gallery-title">Little Fishes</h3>
+            <button class="download-btn" onclick="downloadFile('glugluglu.vox')">
+                <i class="bi bi-download"></i>
+                Download
+            </button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
